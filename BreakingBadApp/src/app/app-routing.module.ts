@@ -13,10 +13,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/characters/characters.module').then( m => m.CharactersPageModule)
   },
   {
-    path: 'characters-details',
-    loadChildren: () => import('./pages/characters-details/characters-details.module').then( m => m.CharactersDetailsPageModule)
-  },
-  {
     path: 'episodes',
     loadChildren: () => import('./pages/episodes/episodes.module').then( m => m.EpisodesPageModule)
   },
@@ -35,6 +31,10 @@ const routes: Routes = [
   {
     path: 'deaths',
     loadChildren: () => import('./pages/deaths/deaths.module').then( m => m.DeathsPageModule)
+  },
+  {
+    path: 'character-details',
+    loadChildren: () => import('./pages/character-details/character-details.module').then( m => m.CharacterDetailsPageModule)
   },
 ];
 
