@@ -1,9 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>characterDetails</ion-title>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start" defaultHref="/tabs/characters">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ character.name }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="unfavoriteepisode()" *ngIf="isFavorite">
+        <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+      <ion-button (click)="favoriteepisode()" *ngIf="!isFavorite">
+        <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
-
+<ion-content padding>
+  <ion-card *ngIf="character" class="movie-card">
+    <ion-card-header>Name: {{ character.name }} Nick-Name {{ character.birthday }}</ion-card-header>
+    <ion-card-content>
+      {{ character.img }}
+    </ion-card-content>
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="episode" slot="start"></ion-icon>
+      Seasons: {{ character.category }}
+    </ion-item>
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="calendar" slot="start"></ion-icon>
+      Date of Birth: {{ character.birthday }}
+    </ion-item>
+  </ion-card>
 </ion-content>
