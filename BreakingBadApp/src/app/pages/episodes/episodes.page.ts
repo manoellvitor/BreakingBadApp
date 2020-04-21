@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from  '@angular/router';
-import { NavController } from '@ionic/angular';
+import { ApiService } from '../services/api.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-episodes',
@@ -9,9 +10,17 @@ import { NavController } from '@ionic/angular';
 })
 export class EpisodesPage implements OnInit {
 
-  constructor(private navController: NavController, private router: Router) { }
+  episodes: Observable<any>;
+
+  constructor(private router: Router, private api: ApiService) { }
 
   ngOnInit() {
+    this.episodes = this.api.getEpisodes();
+  }
+
+  openDetails(episode){
+    let episodeId = episode;
+    this.router.navigateByUrl('tabs/episodes/${episodeId}');
   }
 
 }

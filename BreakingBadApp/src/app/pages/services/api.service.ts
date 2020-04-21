@@ -9,11 +9,11 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
 
-  getEpsodes() {
+  getEpisodes() {
     return this.http.get('https://www.breakingbadapi.com/api/episodes')
   }
 
-  getEpsode(id) {
-    return this.http.get('https://www.breakingbadapi.com/api/episodes/${id}')
+  getEpisode(id) {
+    return this.http.get(`https://www.breakingbadapi.com/api/episodes/${id}`)
   }
 }
