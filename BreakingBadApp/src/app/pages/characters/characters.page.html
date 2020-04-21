@@ -1,9 +1,13 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>characters</ion-title>
+  <ion-toolbar color="dark">
+    <ion-title>Characters</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item button detail lines="inset" *ngFor="let character of (characters | async)" (click)="openDetails(character)">
+      {{ character.name}}
+    </ion-item>
+  </ion-list>
 </ion-content>
