@@ -2,6 +2,9 @@
   <ion-toolbar color="danger">
     <ion-title>Deaths</ion-title>
   </ion-toolbar>
+  <ion-toolbar color="danger">
+    <ion-searchbar placeholder="Search Quote" animated autocomplete="on" (ionChange)="onSearchChange($event)"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>

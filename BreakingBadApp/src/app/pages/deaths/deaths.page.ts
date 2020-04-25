@@ -23,4 +23,13 @@ export class DeathsPage implements OnInit {
     this.router.navigateByUrl(`/tabs/deaths/${deathId}`);
   }
 
+  onSearchChange(e){
+    let id = e.detail.value;
+    if(id == ''){
+      return;
+    }else{
+      this.router.navigateByUrl(`/tabs/deaths/${id}`);
+    }
+  }
+
 }

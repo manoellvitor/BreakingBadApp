@@ -12,7 +12,6 @@ import { Observable } from 'rxjs';
 export class QuotesPage implements OnInit {
 
   quotes: Observable<any>;
-
   constructor(private router: Router, private api: ApiService) { }
 
   ngOnInit() {
@@ -22,6 +21,17 @@ export class QuotesPage implements OnInit {
   openDetails(quotes){
     let quoteId = quotes.quote_id;
     this.router.navigateByUrl(`/tabs/quotes/${quoteId}`);
+  }
+
+  onSearchChange(e){
+    let id = e.detail.value;
+    if(id == ''){
+      return;
+    }else{
+      this.router.navigateByUrl(`/tabs/quotes/${id}`);
+    }
+    
+    
   }
 
 }

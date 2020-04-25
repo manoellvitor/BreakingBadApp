@@ -2,6 +2,9 @@
   <ion-toolbar color="dark">
     <ion-title>Quotes</ion-title>
   </ion-toolbar>
+  <ion-toolbar color="dark">
+    <ion-searchbar placeholder="Search Quote" animated autocomplete="on" (ionChange)="onSearchChange($event)"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
