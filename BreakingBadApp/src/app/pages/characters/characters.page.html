@@ -7,7 +7,7 @@
 <ion-content>
   <ion-list>
     <ion-item button detail lines="inset" *ngFor="let character of (characters | async)" (click)="openDetails(character)">
-      {{ character.name}}
+      {{ character.name}} | {{ character.nickname }}
     </ion-item>
   </ion-list>
 </ion-content>
