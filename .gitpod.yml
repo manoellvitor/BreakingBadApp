@@ -1,3 +1,8 @@
 tasks:
   - name: Installing Ionic 5 & Cordova
   - command: npm i -g @ionic/cli cordova
+  - command: ionic g page pages/episodes && ionic g page pages/episodesDetails
+  - command: ionic g page pages/characters && ionic g page pages/charactersDetails
+  - command: ionic g page pages/quotes && ionic g page pages/quotesDetails
+  - command: ionic g page pages/deaths
+  - command: ionic g service services/api
