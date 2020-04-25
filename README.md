@@ -2,7 +2,7 @@
  Simple mobile aplication developed using Ionic
 
 # Developed BY
-    Manoel, Following the teacher guidance and the following totorials at Youtube ->
+    Manoel, Following the teacher guidance and the following totorials on Youtube ->
 
     https://www.youtube.com/watch?v=Nc1RqvDY-B8&feature=youtu.be
 
