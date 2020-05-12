@@ -53,6 +53,14 @@ const routes: Routes = [
             loadChildren: () => import('../deaths/deaths.module').then(m => m.DeathsPageModule)
           }
         ]
+      },{
+        path: 'camera',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../camera/camera.module').then(m => m.CameraPageModule)
+          }
+        ]
       }
     ]
   },
