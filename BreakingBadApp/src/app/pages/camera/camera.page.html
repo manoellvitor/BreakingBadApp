@@ -5,7 +5,10 @@
 </ion-header>
 
 <ion-content>
-  <img [src]="photo" >
+  <ion-avatar>
+    <img [src]="photo" >
+  </ion-avatar>
+  
 
   <ion-fab vertical="bottom" horizontal="center" slot="fixed">
     <ion-fab-button (click)="takePicture()">
